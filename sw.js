@@ -1,6 +1,6 @@
 self.addEventListener("install",event=>{
     event.waitUntil(
-        caches.open("pwa-cache-v2").then(cache=>{
+        caches.open("pwa-cache-v3").then(cache=>{
             return cache.addAll([
                 "./",
                 "index.html",
