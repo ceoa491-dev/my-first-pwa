@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    background: radial-gradient(rgb(120, 120, 239),blue);
+}
+div{
+    height: 400px;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+input{
+    width: 340px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+button{
+    width: 180px;
+    height: 35px;
+    background-color: blue;
+    border-radius: 5px;
+}
