@@ -34,4 +34,14 @@ button{
     height: 44px;
     background-color: rgb(57, 57, 229);
     border-radius: 5px;
+    color: white;
+    transition: all 0.8s ease-in-out;
+}
+button:hover{
+    background-color: rgb(173, 173, 241);
+    transform: scale(1.1);
+}
+button:active{
+    background-color: rgb(18, 18, 48);
+    transform: scale(1.1);
 }
