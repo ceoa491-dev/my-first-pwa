@@ -1,6 +1,9 @@
 body{
     margin: 0;
     background: radial-gradient(rgb(120, 120, 239),blue);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 div{
     height: 400px;
