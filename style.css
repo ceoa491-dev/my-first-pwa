@@ -8,8 +8,8 @@ body{
 }
 
 #card{
-    width: 99%;
-    max-width: 320px;
+    width: 100%;
+    max-width: 420px;
     padding: 20px;
     background: white;
     border-radius: 12px;
