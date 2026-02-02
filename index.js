@@ -6,7 +6,7 @@ document.getElementById("childsafe").addEventListener("submit",function(e){
         passs:document.getElementById("pass").value,
         who:document.getElementById("who").value
     };
-    fetch("http://localhost:8082/child/create",{
+    fetch("https://childsafety-backend-6.onrender.com/child/create",{
         method: "POST",
         headers:{
             "Content-Type":"application/json"
