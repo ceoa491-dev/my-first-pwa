@@ -16,6 +16,7 @@ document.getElementById("childsafe").addEventListener("submit",function(e){
     .then(res=>res.json())
     .then(res=>{
         alert("Data Saved Successfully");
+        
         console.log(res);
     })
     .catch(err=>console.log(err));
