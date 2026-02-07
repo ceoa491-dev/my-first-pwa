@@ -38,7 +38,7 @@ if (role === "Children") {
         const lat = e.latlng.lat;
         const lng = e.latlng.lng;
 
-        fetch("http://localhost:8080/location/update", {
+        fetch("https://childsafety-backend-6.onrender.com/location/update", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -59,7 +59,7 @@ if (role === "Children") {
 if (role === "Parent") {
 
     setInterval(() => {
-        fetch("http://localhost:8080/location/by-email/" + email)
+        fetch("https://childsafety-backend-6.onrender.com/location/by-email/" + email)
             .then(res => res.json())
             .then(loc => {
                 const latlng = [loc.latitude, loc.longitude];

@@ -7,7 +7,7 @@ document.getElementById("childsafell").addEventListener("submit", function (e) {
         who: document.getElementById("who").value   // Parent / Children
     };
 
-    fetch("http://localhost:8080/child/verify", {
+    fetch("https://childsafety-backend-6.onrender.com/child/verify", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
