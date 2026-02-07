@@ -3,10 +3,11 @@ document.getElementById("childsafell").addEventListener("submit", function (e) {
 
     const data = {
         email: document.getElementById("email").value,
-        passs: document.getElementById("pass").value
+        passs: document.getElementById("pass").value,
+        who: document.getElementById("who").value   // Parent / Children
     };
 
-    fetch("https://childsafety-backend-6.onrender.com/child/verify", {
+    fetch("http://localhost:8080/child/verify", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -14,16 +15,18 @@ document.getElementById("childsafell").addEventListener("submit", function (e) {
         body: JSON.stringify(data)
     })
     .then(res => {
-        if (!res.ok) {
-            throw new Error("Invalid email or password");
-        }
+        if (!res.ok) throw new Error("Invalid login");
         return res.json();
     })
     .then(res => {
         alert("Login successful");
-        window.location.href="home.html"
-        console.log(res);
-        
+
+        // save login info
+        localStorage.setItem("email", res.email);
+        localStorage.setItem("role", res.who);
+
+        // ONE PAGE FOR BOTH
+        window.location.href = "home.html";
     })
     .catch(err => {
         alert(err.message);
